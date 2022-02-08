@@ -16,50 +16,61 @@
 
 get_header();
 ?>
+    <div class="outline"></div>
+    <video autoplay muted loop class="background-video">
+      <source src="assets/imgs/space-purple.webm" type="video/mp4">
+    </video>
+    <main class="fullscreen">
+      <a class="fullscreen-item" data-item-number="0">
+        <div class="image"></div>
+        <span>WORK</span>
+      </a>
+      <a class="fullscreen-item" data-item-number="1">
+        <div class="image"></div>
+        <span>ABOUT</span>
+      </a>
+      <a class="logo" data-item-number="2">
+        NAVE
+      </a>
+      <a class="fullscreen-item" data-item-number="3">
+        <div class="image"></div>
+        <span>COMMUNITY</span>
+      </a>
+      <a class="fullscreen-item" data-item-number="4">
+        <div class="image"></div>
+        <span>CONNECT</span>
+      </a>
+    </main>
+    <nav class="fullscreen">
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>WORK</span>
+      </a>
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>ABOUT</span>
+      </a>
+      <a class="logo">
+        NAVE
+      </a>
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>COMMUNITY</span>
+      </a>
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>CONNECT</span>
+      </a>
+    </nav>
+    <!--Transition JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-          <h1 class="leading">NAVE AGENCY</h1>
-          <div class="row">
-            <div class="col">
-              We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-            </div>
-            <div class="col">
-              We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-            </div>
-            <div class="col">
-              We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-            </div>
-          </div>
-          <div class="row mb-0">
-            <div class="col-card mb-60">
-              <div class="img-wrapper">
-                <div class="img-text">
-                  Holly is a creative swiss army knife with a skillset that spans illustration, graphic design, photography, apparel design, and more. She does it all, which allows her to see visual executions through 360° lens. Her vivid personal style, love of travel, and penchant for working on JDM cars brings an  effortless creative energy to any team or project.
-                </div>
-                <img src="https://cdn.consumidormoderno.com.br/wp-content/uploads/2020/05/streamers-isolamento-social-5.jpg">
-              </div>
-              <h3 class="title">TITULO</h3>
-              <h5 class="subtitle">SUBTITULO</h5>
-            </div>
-            <div class="col-card mb-60">
-              <div class="img-wrapper">
-                <div class="img-text">
-                  Holly is a creative swiss army knife with a skillset that spans illustration, graphic design, photography, apparel design, and more. She does it all, which allows her to see visual executions through 360° lens. Her vivid personal style, love of travel, and penchant for working on JDM cars brings an  effortless creative energy to any team or project.
-                </div>
-                <img src="https://cdn.consumidormoderno.com.br/wp-content/uploads/2020/05/streamers-isolamento-social-5.jpg">
-              </div>
-              <h3 class="title">TITULO</h3>
-              <h5 class="subtitle">SUBTITULO</h5>
-            </div>
-            <div class="col-card mb-60">
-              <div class="img-wrapper">
-                <div class="img-text">
-                  Holly is a creative swiss army knife with a skillset that spans illustration, graphic design, photography, apparel design, and more. She does it all, which allows her to see visual executions through 360° lens. Her vivid personal style, love of travel, and penchant for working on JDM cars brings an  effortless creative energy to any team or project.
-                </div>
-                <img src="https://cdn.consumidormoderno.com.br/wp-content/uploads/2020/05/streamers-isolamento-social-5.jpg">
-              </div>
-              <h3 class="title">TITULO</h3>
-              <h5 class="subtitle">SUBTITULO</h5>
-            </div>
-          </div>
-
-<?php get_footer(); ?>
+<?php
+if ( is_home() ) :
+    get_footer( 'home' );
+elseif ( is_404() ) :
+    get_footer( '404' );
+else :
+    get_footer();
+endif;
+ ?>

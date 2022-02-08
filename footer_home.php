@@ -13,69 +13,9 @@
 
 ?>
         </main>
-        <nav>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>WORK</span>
-          </a>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>ABOUT</span>
-          </a>
-          <a class="logo">
-            NAVE
-          </a>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>COMMUNITY</span>
-          </a>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>CONNECT</span>
-          </a>
-        </nav>
     <script>
     
 document.addEventListener("DOMContentLoaded", function(e) {
-  try {
-    const headerToggle = document.querySelector('#headerToggleNav');
-    headerToggle.addEventListener('click', (e) => {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('active');
-    });
-  }catch(error) {
-    console.log(error.message);
-  }
-
-  try {
-    const colCards = document.querySelectorAll('.col-card .img-wrapper');
-    colCards.forEach((colCard) => {
-      colCard.addEventListener('click', (e) => {
-        const colCardImg = colCard.querySelector('img');
-        colCardImg.classList.toggle('active');
-      });
-    });
-  }catch(error) {
-    console.log(error.message);
-  }
-
-  try {
-    const main = document.querySelector('main');
-    main.addEventListener('scroll', function() {
-      const scroll = main.scrollTop;
-      const max = main.scrollHeight;
-      console.log('scroll', scroll);
-      console.log('max', max);
-      const perc = scroll/max*100;
-      const backgroundElem = document.querySelector('.background');
-      console.log(perc);
-      backgroundElem.style.filter = `hue-rotate(45deg), brightness(${perc/100});`;
-      backgroundElem.style.backgroundPosition = `0% ${perc}%`;
-    });
-  }catch(error) {
-    console.log(error.message);
-  }
-
   const backgroundElem = document.querySelector('.background-video');
   const mainElem = document.querySelector('main.fullscreen');
   const mainStateList = [
