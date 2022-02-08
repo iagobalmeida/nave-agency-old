@@ -12,7 +12,31 @@
  */
 
 ?>
-        </main>
+        
+    </main>
+    <nav class="fullscreen">
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>WORK</span>
+      </a>
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>ABOUT</span>
+      </a>
+      <a class="logo">
+        NAVE
+      </a>
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>COMMUNITY</span>
+      </a>
+      <a class="item">
+        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+        <span>CONNECT</span>
+      </a>
+    </nav>
+    <!--Transition JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     
 document.addEventListener("DOMContentLoaded", function(e) {
