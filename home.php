@@ -2,21 +2,21 @@
 <?php get_header( 'home' ); ?>
   <a class="fullscreen-item" data-item-number="0">
     <div class="image"></div>
-    <span>WORK</span>
+    <span>ESTRELAS</span>
   </a>
   <a class="fullscreen-item" data-item-number="1">
     <div class="image"></div>
-    <span>ABOUT</span>
+    <span>SOBRE</span>
   </a>
   <a class="logo" data-item-number="2">
-    NAVE
+    <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
   </a>
   <a class="fullscreen-item" data-item-number="3">
     <div class="image"></div>
-    <span>COMMUNITY</span>
+    <span>CONTATO</span>
   </a>
   <a class="fullscreen-item" data-item-number="4">
     <div class="image"></div>
-    <span>CONNECT</span>
+    <span>STAFF</span>
   </a>
 <?php get_footer( 'home' ); ?>
