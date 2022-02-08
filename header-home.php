@@ -30,6 +30,6 @@
   <body class="fullscreen">
     <div class="outline"></div>
     <video autoplay muted loop class="background-video">
-      <source src="<?=get_template_directory()/?>/assets/imgs/space-purple.webm" type="video/mp4">
+      <source src="<?=get_template_directory();?>/assets/imgs/space-purple.webm" type="video/mp4">
     </video>
     <main class="fullscreen">
