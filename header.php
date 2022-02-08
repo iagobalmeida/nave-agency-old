@@ -25,10 +25,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-		<?php wp_head(); ?>
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
       </head>
-  <body <?php body_class(); ?>>
+  <body>
         <div class="outline"></div>
         <div class="background"></div>
         
@@ -37,6 +36,3 @@
           <a id="headerToggleNav">MENU</a>
         </header>
         <main>
-    		<?php
-    		wp_body_open();
-    		?>
