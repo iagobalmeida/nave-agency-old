@@ -1,13 +1,5 @@
 
-<?php
-if ( is_home() ) :
-    get_header( 'home' );
-elseif ( is_404() ) :
-    get_header( '404' );
-else :
-    get_header();
-endif;
- ?>
+<?php get_header( 'home' ); ?>
   <a class="fullscreen-item" data-item-number="0">
     <div class="image"></div>
     <span>WORK</span>
@@ -27,12 +19,4 @@ endif;
     <div class="image"></div>
     <span>CONNECT</span>
   </a>
-<?php
-if ( is_home() ) :
-    get_footer( 'home' );
-elseif ( is_404() ) :
-    get_footer( '404' );
-else :
-    get_footer();
-endif;
- ?>
+<?php get_footer( 'home' ); ?>
