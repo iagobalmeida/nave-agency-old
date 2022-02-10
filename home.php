@@ -1,4 +1,3 @@
-
 <?php get_header( 'home' ); ?>
   <a class="fullscreen-item" data-item-number="0">
     <div class="image"></div>

@@ -12,29 +12,29 @@
  */
 
 ?>
-        </main>
-        <nav>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>WORK</span>
-          </a>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>ABOUT</span>
-          </a>
-          <a class="logo">
-            NAVE
-          </a>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>COMMUNITY</span>
-          </a>
-          <a class="item">
-            <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-            <span>CONNECT</span>
-          </a>
-        </nav>
-    <script>
+      </main>
+      <nav>
+        <a class="item">
+          <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+          <span>WORK</span>
+        </a>
+        <a class="item">
+          <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+          <span>ABOUT</span>
+        </a>
+        <a class="logo" href="<?= home_url(); ?>">
+          <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
+        </a>
+        <a class="item">
+          <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+          <span>COMMUNITY</span>
+        </a>
+        <a class="item">
+          <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
+          <span>CONNECT</span>
+        </a>
+      </nav>
+  <script>
     
 document.addEventListener("DOMContentLoaded", function(e) {
   try {

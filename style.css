@@ -140,6 +140,12 @@ body::before {
 
 .background-video {
   position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.background-video.fullscreen {
   left: -50%;
   top: -50%;
   min-width: 200%;
@@ -264,7 +270,7 @@ nav {
 
 nav a {
   height: 100%;
-  border: 1px solid var(--main-bg-color);
+  border: 1px solid black;
   border-bottom: 0px;
   display: flex;
   justify-content: center;
@@ -275,17 +281,21 @@ nav a {
 }
 
 nav:not(.fullscreen) a {
-  background-color: black;
+  background-color: #00000060;
 }
 
 nav a.logo {
-  width: 100px;
-  border: 2px solid var(--main-bg-color);
+  width: 170px;
+  border: 1px solid black;
   border-bottom: 0px solid var(--main-bg-color);
 }
 
 a.logo img {
   width: 50%;
+}
+
+nav.fullscreen a.logo img {
+  height: 100px;
 }
 
 nav a.item {
@@ -355,12 +365,18 @@ nav.fullscreen {
   }
   nav.fullscreen {
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
   nav a {
     border-bottom: 1px solid var(--main-bg-color);
   }
   nav:not(.fullscreen) a.logo {
     display: none;
+  }
+  nav.fullscreen a.logo {
+    flex: 1;
+    width: 100%;
   }
   nav.active {
     opacity: 1;

@@ -29,9 +29,9 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
       </head>
   <body>
-        <div class="outline"></div>
-        <div class="background"></div>
-        
+        <video autoplay muted loop class="background-video">
+          <source src="<?=get_template_directory_uri();?>/assets/imgs/space-purple.webm" type="video/mp4">
+        </video>
         <header>
           <b>NAVE Agency</b>
           <a id="headerToggleNav">MENU</a>

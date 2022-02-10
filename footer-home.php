@@ -24,7 +24,7 @@
         <span>ABOUT</span>
       </a>
       <a class="logo">
-        NAVE
+        <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
       </a>
       <a class="item">
         <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">

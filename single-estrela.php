@@ -8,6 +8,14 @@ else :
 endif;
 ?>
 
+<h1>ESTRELA</h1>
+<pre>
+<?php
+
+print_r(array_keys(get_defined_vars()));
+var_dump($estrela);
+?>
+</pre>
 <?php
 if ( is_home() ) :
   get_footer( 'home' );
