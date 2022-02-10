@@ -48,8 +48,8 @@ get_header();
                             <?= file_get_contents(get_template_directory_uri().'/assets/icons/face-b.svg'); ?>
                         </a>
                     <?php endif; ?>
-                    <?php if($customFields['url_site']): ?>
-                        <a href="<?=$customFields['url_site']?>">
+                    <?php if($customFields['url_link']): ?>
+                        <a href="<?=$customFields['url_link']?>">
                             <?= file_get_contents(get_template_directory_uri().'/assets/icons/link-b.svg'); ?>
                         </a>
                     <?php endif; ?>
