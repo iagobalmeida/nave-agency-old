@@ -184,8 +184,10 @@ main::-webkit-scrollbar {
 }
 
 main h1.leading {
-  font-size: 13vw;
+  font-size: 130px;
+  font-weight: bold;
   line-height: 30vh;
+  text-align: center;
 }
 
 main div.row {
@@ -196,13 +198,12 @@ main div.row {
   margin-bottom: 60px;
 }
 
-main div.row .col-text {
-  padding: 15px;
+main div.row.full {
+  grid-template-columns: auto;
 }
 
-main div.row .col-card {
-  
-  background-color: black;
+main div.row .col-text {
+  padding: 15px;
 }
 
 
@@ -219,24 +220,45 @@ main div.row .col-card .img-wrapper .img-text {
   content:     "";
   display:     block;
   min-height:     30vw; /* initial ratio of 1:1*/
-  background-color: var(--main-bg-color);
+  background-color: #ffffffdd;
   color: black;
   padding: 8px;
   overflow: auto;
-}
-
-main div.row .col-card .img-wrapper img {
   position: absolute;
-  top:      0;
+  top:      100%;
   left:     0;
   bottom:   0;
   right:    0;
+  transition: 250ms ease-in-out;
+}
+
+main div.row .col-card .img-wrapper .img-text.active {
+  top:      0;
+}
+
+main div.row .col-card .img-wrapper .img-text .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+main div.row .col-card .img-wrapper .img-text .social-icons a {
+  flex: 1;
+}
+
+main div.row .col-card .img-wrapper img {
   width: 100%;
   height:100%;
   transition: 250ms linear;
 }
 
-main div.row .col-card .img-wrapper img.active {
+/* main div.row .col-card .img-wrapper img.active {
   position: absolute;
   top:      100%;
   left:     0;
@@ -244,7 +266,7 @@ main div.row .col-card .img-wrapper img.active {
   right:    0;
   width: 100%;
   height:100%;
-}
+} */
 
 main div.row .col-card .title {
   color: var(--main-bg-color);
@@ -256,7 +278,8 @@ main div.row .col-card .title {
 
 main div.row .col-card .subtitle {
   color: var(--main-bg-color);
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: normal;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--main-bg-color);
   width: 100%;

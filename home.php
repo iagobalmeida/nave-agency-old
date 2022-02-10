@@ -1,5 +1,5 @@
 <?php get_header( 'home' ); ?>
-  <a class="fullscreen-item" data-item-number="0">
+  <a class="fullscreen-item" data-item-number="0" href="<?=get_permalink(get_page_by_title( 'Estrelas' ))?>">
     <div class="image"></div>
     <span>ESTRELAS</span>
   </a>

@@ -14,24 +14,24 @@
 ?>
       </main>
       <nav>
-        <a class="item">
+        <a class="item" href="<?=get_permalink(get_page_by_title( 'Estrelas' ))?>">
           <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-          <span>WORK</span>
+          <span>ESTRELAS</span>
         </a>
         <a class="item">
           <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-          <span>ABOUT</span>
+          <span>STAFF</span>
         </a>
         <a class="logo" href="<?= home_url(); ?>">
           <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
         </a>
         <a class="item">
           <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-          <span>COMMUNITY</span>
+          <span>SOBRE</span>
         </a>
         <a class="item">
           <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-          <span>CONNECT</span>
+          <span>CONTATO</span>
         </a>
       </nav>
   <script>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     const colCards = document.querySelectorAll('.col-card .img-wrapper');
     colCards.forEach((colCard) => {
       colCard.addEventListener('click', (e) => {
-        const colCardImg = colCard.querySelector('img');
+        const colCardImg = colCard.querySelector('.img-text');
         colCardImg.classList.toggle('active');
       });
     });

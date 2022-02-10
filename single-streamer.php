@@ -12,8 +12,8 @@ endif;
 <pre>
 <?php
 
-print_r(array_keys(get_defined_vars()));
-var_dump($estrela);
+var_dump($streamer);
+var_dump(get_fields($id));
 ?>
 </pre>
 <?php
