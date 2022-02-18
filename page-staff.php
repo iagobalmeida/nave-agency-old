@@ -9,7 +9,7 @@ get_header();
 ?>
 <style>
     .background-video {
-        transition: all 125ms ease-in-out;
+        transition: all 500ms ease-in-out;
         filter: hue-rotate(90deg);
     }
 </style>

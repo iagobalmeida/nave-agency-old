@@ -73,6 +73,13 @@
     
 document.addEventListener("DOMContentLoaded", function(e) {
   try {
+    const backgroundElem = document.querySelector('.background-video');
+    backgroundElem.style.opacity = 1;
+  }catch(error) {
+    console.log(error.message);
+  }
+
+  try {
     const contactToggle = document.querySelector('#contact_toggle');
     const contactForm = document.querySelector('.contact-wrapper');
     contactToggle.addEventListener('click', (e) => {
@@ -105,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
     console.log(error.message);
   }
 
-  const backgroundElem = document.querySelector('.background-video');
   const mainElem = document.querySelector('main.fullscreen');
 });
 

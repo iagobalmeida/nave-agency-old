@@ -40,6 +40,13 @@
     <script>
     
 document.addEventListener("DOMContentLoaded", function(e) {
+  try {
+    const backgroundElem = document.querySelector('.background-video');
+    backgroundElem.style.opacity = 1;
+  }catch(error) {
+    console.log(error.message);
+  }
+  
   const backgroundElem = document.querySelector('.background-video');
   const mainElem = document.querySelector('main.fullscreen');
   const mainStateList = [

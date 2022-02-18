@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: opacity 175ms ease-in-out;
 }
 
 :root {
@@ -36,7 +35,7 @@ body {
   grid-column: 1;
   color: var(--main-bg-color);
   font-family: 'Ubuntu', sans-serif;
-  background: transparent;
+  background: black;
 }
 
 body:not(.fullscreen) {
@@ -154,6 +153,7 @@ body::before {
   z-index: -1;
   left: 0;
   top: 0;
+  opacity: 0;
 }
 
 .background-video.fullscreen {
