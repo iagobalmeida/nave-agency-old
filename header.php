@@ -32,8 +32,11 @@
         <video autoplay muted loop class="background-video">
           <source src="<?=get_template_directory_uri();?>/assets/imgs/space-purple.webm" type="video/mp4">
         </video>
-        <header>
-          <b>NAVE Agency</b>
-          <a id="headerToggleNav">MENU</a>
-        </header>
+          <header>
+            <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
+            
+            <a id="headerToggleNav">
+              <?= file_get_contents(get_template_directory_uri().'/assets/icons/minus-w.svg'); ?>
+            </a>
+          </header>
         <main>

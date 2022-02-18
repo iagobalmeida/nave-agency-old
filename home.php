@@ -3,7 +3,7 @@
     <div class="image"></div>
     <span>ESTRELAS</span>
   </a>
-  <a class="fullscreen-item" data-item-number="1">
+  <a class="fullscreen-item" data-item-number="1" href="<?=get_permalink(get_page_by_title( 'Sobre' ))?>">
     <div class="image"></div>
     <span>SOBRE</span>
   </a>
@@ -14,7 +14,7 @@
     <div class="image"></div>
     <span>CONTATO</span>
   </a>
-  <a class="fullscreen-item" data-item-number="4">
+  <a class="fullscreen-item" data-item-number="4" href="<?=get_permalink(get_page_by_title( 'Staff' ))?>">
     <div class="image"></div>
     <span>STAFF</span>
   </a>

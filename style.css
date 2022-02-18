@@ -18,6 +18,17 @@ header {
   display: none;
 }
 
+header img, header svg {
+  height: 30px;
+}
+
+/*
+Roxo (padrão): 0°
+Estrelas (rosa): 50°
+Staff (vermelho): 90°
+Sobre (azul-piscina): 270°
+*/
+
 body {
   height: 100vh;
   width: 100vw;
@@ -210,7 +221,6 @@ main div.row .col-text {
 main div.row .col-card .img-wrapper {
   position: relative;
   width:    100%; /* desired width */
-  margin-bottom: 15px;
   border: 1px solid var(--main-bg-color); 
   overflow: hidden;
   cursor: pointer;
@@ -246,10 +256,17 @@ main div.row .col-card .img-wrapper .img-text .social-icons {
   bottom: 0;
   left: 0;
   right: 0;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 main div.row .col-card .img-wrapper .img-text .social-icons a {
   flex: 1;
+}
+
+main div.row .col-card .img-wrapper .img-text .social-icons a.disabled {
+  opacity: .25;
+  cursor: not-allowed;
 }
 
 main div.row .col-card .img-wrapper img {
@@ -274,21 +291,39 @@ main div.row .col-card .title {
   font-weight: 700;
   width: 100%;
   letter-spacing: 3px;
+  margin-bottom: 5px;
 }
 
-main div.row .col-card .subtitle {
+main div.row .col-card .title-wrapper .text .subtitle {
   color: var(--main-bg-color);
   font-size: 12px;
   font-weight: normal;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--main-bg-color);
   width: 100%;
 }
+
+main div.row .col-card .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--main-bg-color);
+}
+
+
+main div.row .col-card .title-wrapper span svg {
+  height: 5vh;
+  cursor: pointer;
+}
+
+
 
 nav {
   display: flex;
   align-items: center;
   flex-direction: row;
+  z-index: 2;
 }
 
 nav a {
@@ -304,7 +339,7 @@ nav a {
 }
 
 nav:not(.fullscreen) a {
-  background-color: #00000060;
+  background-color: #000000e0;
 }
 
 nav a.logo {
@@ -354,6 +389,87 @@ nav.fullscreen {
   display: none;
 }
 
+.contact-wrapper {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 50% 50%;
+  position: fixed;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000e0;
+  transition: 250ms ease-in-out;
+  z-index: 2;
+}
+
+.contact-wrapper.active {
+  top: 0;
+}
+
+.contact-wrapper .contact-link a svg {
+  width: 12vw;
+}
+
+.contact-wrapper .contact-form {
+  margin: 50px;
+}
+
+.contact-wrapper .contact-form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-wrapper .contact-form .input-wrapper label {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.contact-wrapper .contact-form .input-wrapper input {
+  background-color: transparent;
+  border: 2px solid white;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.contact-wrapper .contact-form .input-wrapper textarea {
+  background-color: transparent;
+  border: 2px solid white;
+  margin-bottom: 30px;
+  flex: 1;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+input:focus, input:active, textarea:focus, textarea:active {
+  outline: none;
+  border: 3px solid white;
+}
+
+.contact-wrapper .contact-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  margin: 50px;
+}
+
+.contact-wrapper .leading {
+  grid-area: 1 / 1 / 1 / 3;
+  font-size: 130px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 25px;
+}
+
 @media screen and (max-width: 1024px) {
   main h1.leading {
     font-size: 13vw;
@@ -369,7 +485,8 @@ nav.fullscreen {
     flex-direction: row;
     padding-left: 20px;
     padding-right: 20px;
-    border: 1px solid var(--main-bg-color);
+    border: 1px solid black;
+    background-color: #000000e0;
   }
   body:not(.fullscreen) {
     grid-template-rows: 50px auto;
@@ -392,7 +509,7 @@ nav.fullscreen {
     align-items: stretch;
   }
   nav a {
-    border-bottom: 1px solid var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
   }
   nav:not(.fullscreen) a.logo {
     display: none;
@@ -414,6 +531,26 @@ nav.fullscreen {
   }
   main div.row .col-card .img-wrapper .img-text {
    min-height: 80vw; 
+  }
+  .contact-wrapper {
+    grid-template-rows: 15% 75% 10%;
+    grid-template-columns: 50% 50%;
+  }
+  .contact-wrapper .contact-form {
+    grid-area: 2 / 1 / 2 /3;
+  }
+  .contact-wrapper .contact-link {
+    grid-area: 3 / 1 / 3 / 3;
+    margin: 0px;
+  }
+  .contact-wrapper .contact-link a svg{
+    width: 12vw;
+  }
+  .contact-wrapper .leading { 
+    font-size: 16vw;
+    margin-left: 0px;
+    text-align: center;
+
   }
 }
 

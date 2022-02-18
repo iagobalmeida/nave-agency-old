@@ -48,18 +48,21 @@ document.addEventListener("DOMContentLoaded", function(e) {
       top: '-35%',
       'grid-template-columns': '2fr .5fr 1fr',
       'grid-template-rows': '1.5fr .5fr 1fr',
+      'hue-rotate': '50deg'
     },
     {
       left: '-65%',
       top: '-35%',
       'grid-template-columns': '1fr .5fr 1.5fr',
-      'grid-template-rows': '2fr .5fr 1fr'
+      'grid-template-rows': '2fr .5fr 1fr',
+      'hue-rotate': '-90deg'
     },
     {
       left: '-50%',
       top: '-50%',
       'grid-template-columns': '1fr 1.5fr 1fr',
-      'grid-template-rows': '1fr 1.5fr 1fr'
+      'grid-template-rows': '1fr 1.5fr 1fr',
+      'hue-rotate': '0deg'
     },
     {
       left: '-35%',
@@ -71,13 +74,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
       left: '-65%',
       top: '-65%',
       'grid-template-columns': '1fr .5fr 1.5fr',
-      'grid-template-rows': '1fr .5fr 2fr'
+      'grid-template-rows': '1fr .5fr 2fr',
+      'hue-rotate': '90deg'
     },
     {
       left: '-50%',
       top: '-50%',
       'grid-template-columns': '1fr .5fr 1fr',
       'grid-template-rows': '1fr .5fr 1fr',
+      'hue-rotate': '0deg'
     },
   ]
   if(mainElem) {
@@ -106,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
           ...backgroundAnimationConfig,
           'top':    mainState['top'],
           'left':   mainState['left'],
-          'filter': `hue-rotate(${itemNumber*10}deg)`
+          'filter': `hue-rotate(${mainState['hue-rotate']})`
         });
       });
       mainItemElem.addEventListener('mouseleave', function() {
@@ -119,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
           ...backgroundAnimationConfig,
           'top':  mainStateDefault['top'],
           'left': mainStateDefault['left'],
-          'filter': `hue-rotate(0deg)`
+          'filter': `hue-rotate(${mainStateDefault['hue-rotate']})`
         });
       })
     });

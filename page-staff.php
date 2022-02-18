@@ -1,7 +1,7 @@
 <?php
 $args = array(
     'numberposts' => 10,
-    'post_type'   => 'streamer'
+    'post_type'   => 'staff'
 );
 
 $streamers = get_posts($args);
@@ -10,10 +10,10 @@ get_header();
 <style>
     .background-video {
         transition: all 125ms ease-in-out;
-        filter: hue-rotate(50deg);
+        filter: hue-rotate(90deg);
     }
 </style>
-<h1 class="leading">ESTRELAS</h1>
+<h1 class="leading">STAFF</h1>
 <div class="row full">
     <div class="col">
         We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
@@ -59,15 +59,8 @@ get_header();
             </div>
             <img src="<?= $customFields['imagem']; ?>">
         </div>
-        <div class="title-wrapper">
-            <div class="text">
-                <h3 class="title"><?=$streamer->post_name?></h3>
-                <h5 class="subtitle">
-                    <?=$customFields['subtitulo']?>
-                </h5>
-            </div>
-            <span class="svg-plus"><?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?></span>
-        </div>
+        <h3 class="title"><?=$streamer->post_name?></h3>
+        <h5 class="subtitle"><?=$customFields['subtitulo']?></h5>
     </div>
     <?php endforeach; ?>
 </div>
