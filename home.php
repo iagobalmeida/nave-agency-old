@@ -10,7 +10,7 @@
   <a class="logo" data-item-number="2">
     <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
   </a>
-  <a class="fullscreen-item" data-item-number="3">
+  <a class="fullscreen-item" data-item-number="3"  id="contact_toggle">
     <div class="image"></div>
     <span>CONTATO</span>
   </a>
@@ -19,3 +19,4 @@
     <span>STAFF</span>
   </a>
 <?php get_footer( 'home' ); ?>
+

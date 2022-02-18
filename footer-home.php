@@ -12,8 +12,48 @@
  */
 
 ?>
-        
+      <form class="contact-wrapper">
+        <span class="close">
+          <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
+        </span>
+        <h1 class="leading">CONTATO</h1>
+        <div class="contact-form">
+          <div class="input-wrapper">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+          </div>
+          <div class="input-wrapper">
+            <label for="email">E-mail</label>
+            <input type="email" name="email">
+          </div>
+          <div class="input-wrapper" style="height: 55%">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem"></textarea>
+          </div>
+        </div>
+        <div class="contact-link">
+          <a href="#">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-w.svg'); ?>
+          </a>
+          <a href="#">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/twitter-w.svg'); ?>
+          </a>
+          <a href="#">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/insta-w.svg'); ?>
+          </a>
+          <a href="#">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/yt-w.svg'); ?>
+          </a>
+          <a href="#">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/face-w.svg'); ?>
+          </a>
+          <a href="#">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/link-w.svg'); ?>
+          </a>
+        </div>
+      </form>
     </main>
+    
     <nav class="fullscreen">
       <a class="item">
         <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
@@ -40,6 +80,22 @@
     <script>
     
 document.addEventListener("DOMContentLoaded", function(e) {
+
+  try {
+    const contactToggle = document.querySelector('#contact_toggle');
+    const contactForm = document.querySelector('.contact-wrapper');
+    const contactClose = document.querySelector('.contact-wrapper .close');
+    contactToggle.addEventListener('click', (e) => {
+      contactForm.classList.toggle('active');
+    });
+    contactClose.addEventListener('click', (e) => {
+      contactForm.classList.toggle('active');
+    });
+  }catch(error) {
+    console.log(error.message);
+  }
+
+
   try {
     const backgroundElem = document.querySelector('.background-video');
     backgroundElem.style.opacity = 1;
@@ -93,6 +149,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
     },
   ]
   if(mainElem) {
+    const animeHueCycle = anime({
+      targets:  backgroundElem,
+      filter:   'hue-rotate(360deg)',
+      loop:     true,
+      autoplay: false,
+      easing:   'linear',
+      duration: 6000
+    });
     const mainStateDefault = mainStateList[mainStateList.length-1];
     const mainAnimationConfig = {
       targets:  mainElem,
@@ -109,6 +173,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
       const itemNumber = mainItemElem.getAttribute('data-item-number');
       const mainState = mainStateList[itemNumber];
       mainItemElem.addEventListener('mouseover', function() {
+        if(itemNumber == 2) {
+          animeHueCycle.play();
+        }
         anime({
           ...mainAnimationConfig,
           'grid-template-columns':  mainState['grid-template-columns'],
@@ -122,6 +189,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
         });
       });
       mainItemElem.addEventListener('mouseleave', function() {
+        if(itemNumber == 2) {
+          animeHueCycle.pause();
+        }
         anime({
           ...mainAnimationConfig,
           'grid-template-columns':  mainStateDefault['grid-template-columns'],
@@ -133,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
           'left': mainStateDefault['left'],
           'filter': `hue-rotate(${mainStateDefault['hue-rotate']})`
         });
-      })
+      });
     });
   }
 });

@@ -13,7 +13,9 @@
 
 ?>
         <form class="contact-wrapper">
-
+          <span class="close">
+            <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
+          </span>
           <h1 class="leading">CONTATO</h1>
           <div class="contact-form">
             <div class="input-wrapper">
@@ -82,7 +84,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
   try {
     const contactToggle = document.querySelector('#contact_toggle');
     const contactForm = document.querySelector('.contact-wrapper');
+    const contactClose = document.querySelector('.contact-wrapper .close');
     contactToggle.addEventListener('click', (e) => {
+      contactForm.classList.toggle('active');
+    });
+    contactClose.addEventListener('click', (e) => {
       contactForm.classList.toggle('active');
     });
   }catch(error) {
@@ -99,13 +105,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
   }catch(error) {
     console.log(error.message);
   }
-
   try {
-    const colCards = document.querySelectorAll('.col-card .img-wrapper');
+    const colCards = document.querySelectorAll('.col-card');
     colCards.forEach((colCard) => {
       colCard.addEventListener('click', (e) => {
-        const colCardImg = colCard.querySelector('.img-text');
-        colCardImg.classList.toggle('active');
+        console.log(e);
+        if(!e.path.find(node => node.nodeName == 'A')) {
+          const colCardImg = colCard.querySelector('.img-text');
+          const colCardSvgLine = colCard.querySelector('.vertical-line');
+          colCardImg.classList.toggle('active');
+          colCardSvgLine.classList.toggle('active');
+        }
       });
     });
   }catch(error) {
