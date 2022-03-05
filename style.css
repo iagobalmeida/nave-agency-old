@@ -213,6 +213,13 @@ main h1.leading {
   text-align: center;
 }
 
+main h2.leading {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 20vh;
+  text-align: center;
+}
+
 main div.row {
   display: grid;
   justify-content: center;
@@ -279,6 +286,7 @@ main div.row .col-card .img-wrapper .img-text .social-icons a {
 }
 
 main div.row .col-card .img-wrapper .img-text .social-icons a.disabled {
+  display: none;
   opacity: .25;
   cursor: not-allowed;
 }
@@ -331,7 +339,79 @@ main div.row .col-card .title-wrapper span svg {
   cursor: pointer;
 }
 
+main .retro-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+main .retro-cards-wrapper .retro-card {
+  width: 45%;
+  background-color: #ff00ff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #000000aa;
+  overflow: hidden;
+}
+
+main .retro-cards-wrapper .retro-card .retro-card-header {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+}
+
+main .retro-cards-wrapper .retro-card .retro-card-header .retro-card-button {
+  margin-left: 2px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  background-color: #aa00aa;
+  font-weight: bold;
+}
+
+main .retro-cards-wrapper .retro-card .retro-card-header .retro-card-button svg {
+  height: 100%;
+}
+
+main .retro-cards-wrapper .retro-card .retro-card-header .retro-card-button.rotate svg {
+  transform: rotateZ(45deg);
+}
+
+main .retro-cards-wrapper .retro-card .retro-card-header .retro-card-button:last-child {
+  background-color: red;
+}
+
+main .retro-cards-wrapper .retro-card .retro-card-body {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  min-height: 100px;
+}
+
+main .retro-cards-wrapper .retro-card.retro-card-left {
+  align-self: start;
+}
+
+main .retro-cards-wrapper .retro-card.retro-card-center {
+  align-self: center;
+}
+
+main .retro-cards-wrapper .retro-card.retro-card-right {
+  align-self: end;
+}
+
+main .partners-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 110px;
+}
+
+main .partners-wrapper .partner {
+  width: 300px;
+  justify-self: center;
+}
 
 nav {
   display: flex;
@@ -460,6 +540,21 @@ nav.fullscreen {
   padding: 10px;
 }
 
+.contact-wrapper .contact-form .input-wrapper button {
+  padding: 10px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+
+.contact-wrapper .contact-form .input-wrapper button:active {
+  border: none;
+  outline: none;
+  background-color: #ddd;
+}
+
 input:focus, input:active, textarea:focus, textarea:active {
   outline: none;
   border: 3px solid white;
@@ -499,12 +594,25 @@ input:focus, input:active, textarea:focus, textarea:active {
 
 @media screen and (max-width: 1024px) {
   main h1.leading {
-    font-size: 13vw;
+    font-size: 12vw;
+    line-height: initial;
+  }
+  main h2.leading {
+    font-size: 8vw;
     line-height: initial;
   }
   main.fullscreen {
     display: none;
   }
+
+  main .retro-cards-wrapper .retro-card {
+    width: 100%;
+  }
+
+  main .retro-cards-wrapper {
+    margin-bottom: 25px;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -559,6 +667,15 @@ input:focus, input:active, textarea:focus, textarea:active {
   }
   main div.row .col-card .img-wrapper .img-text {
    min-height: 80vw; 
+  }
+  main .partners-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  main .partners-wrapper .partner{
+    width: 200px;
   }
   .contact-wrapper {
     padding-top: 60px;

@@ -26,9 +26,12 @@
               <label for="email">E-mail</label>
               <input type="email" name="email">
             </div>
-            <div class="input-wrapper" style="height: 55%">
+            <div class="input-wrapper" style="height: 45%">
               <label for="mensagem">Mensagem</label>
               <textarea name="mensagem"></textarea>
+            </div>
+            <div class="input-wrapper">
+              <button>Enviar</button>
             </div>
           </div>
           <div class="contact-link">
@@ -70,7 +73,6 @@
           <span>CONTATO</span>
         </a>
       </nav>
-
   <script>
     
 document.addEventListener("DOMContentLoaded", function(e) {

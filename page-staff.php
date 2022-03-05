@@ -59,8 +59,15 @@ get_header();
             </div>
             <img src="<?= $customFields['imagem']; ?>">
         </div>
-        <h3 class="title"><?=$streamer->post_name?></h3>
-        <h5 class="subtitle"><?=$customFields['subtitulo']?></h5>
+        <div class="title-wrapper">
+            <div class="text">
+                <h3 class="title"><?=$streamer->post_name?></h3>
+                <h5 class="subtitle">
+                    <?=$customFields['subtitulo']?>
+                </h5>
+            </div>
+            <span class="svg-plus"><?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?></span>
+        </div>
     </div>
     <?php endforeach; ?>
 </div>
