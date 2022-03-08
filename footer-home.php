@@ -58,25 +58,21 @@
     </main>
     
     <nav class="fullscreen">
-      <a class="item">
-        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-        <span>ESTRELAS</span>
-      </a>
-      <a class="item">
-        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-        <span>STAFF</span>
-      </a>
-      <a class="logo">
-        <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
-      </a>
-      <a class="item">
-        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-        <span>SOBRE</span>
-      </a>
-      <a class="item">
-        <img src="https://images.newscientist.com/wp-content/uploads/2020/08/19163900/credit_irina-dmitrienko-_-alamy.jpg?crop=16:9,smart&width=1200&height=675&upscale=true">
-        <span>CONTATO</span>
-      </a>
+        <a class="item" href="<?=get_permalink(get_page_by_title( 'Estrelas' ))?>">
+          <span>ESTRELAS</span>
+        </a>
+        <a class="item"  href="<?=get_permalink(get_page_by_title( 'Staff' ))?>">
+          <span>STAFF</span>
+        </a>
+        <a class="logo"href="<?= home_url(); ?>">
+          <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
+        </a>
+        <a class="item" href="<?=get_permalink(get_page_by_title( 'Sobre' ))?>">
+          <span>SOBRE</span>
+        </a>
+        <a class="item" id="contact_toggle">
+          <span>CONTATO</span>
+        </a>
     </nav>
     <!--Transition JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

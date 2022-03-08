@@ -34,7 +34,7 @@
           <source src="<?=get_template_directory_uri();?>/assets/imgs/space-purple.webm" type="video/mp4">
         </video>
           <header>
-            <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg">
+            <a href="<?=home_url();?>"><img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg"></a>
             
             <a id="headerToggleNav">
               <?= file_get_contents(get_template_directory_uri().'/assets/icons/minus-w.svg'); ?>

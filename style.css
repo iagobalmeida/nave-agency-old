@@ -250,10 +250,8 @@ main div.row .col-card .img-wrapper {
 main div.row .col-card .img-wrapper .img-text {
   content:     "";
   display:     block;
-  min-height:     30vw; /* initial ratio of 1:1*/
   background-color: #ffffffdd;
   color: black;
-  padding: 8px;
   overflow: auto;
   position: absolute;
   top:      100%;
@@ -261,6 +259,8 @@ main div.row .col-card .img-wrapper .img-text {
   bottom:   0;
   right:    0;
   transition: 250ms ease-in-out;
+  display: grid;
+  grid-template-rows: 85% 15%;
 }
 
 main div.row .col-card .img-wrapper .img-text.active {
@@ -269,20 +269,33 @@ main div.row .col-card .img-wrapper .img-text.active {
 
 main div.row .col-card .img-wrapper .img-text .social-icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   align-self: flex-end;
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   max-width: 100%;
-  margin-bottom: 20px;
+  height: 100%;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+main div.row .col-card .img-wrapper .img-text.active .social-icons {
+  opacity: 1;
+}
+
+main div.row .col-card .img-wrapper .img-text .text {
+  padding: 10px;
 }
 
 main div.row .col-card .img-wrapper .img-text .social-icons a {
-  flex: 1;
+  height: 100%;
+}
+
+main div.row .col-card .img-wrapper .img-text .social-icons a svg {
+  height: 100%;
 }
 
 main div.row .col-card .img-wrapper .img-text .social-icons a.disabled {
@@ -351,6 +364,11 @@ main .retro-cards-wrapper .retro-card {
   border-radius: 15px;
   box-shadow: 0px 0px 10px #000000aa;
   overflow: hidden;
+  transition: all 250ms ease-in-out;
+}
+
+.retro-card:hover {
+  transform: scale(1.08);
 }
 
 main .retro-cards-wrapper .retro-card .retro-card-header {
@@ -401,7 +419,7 @@ main .retro-cards-wrapper .retro-card.retro-card-right {
 
 main .partners-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 30% 30% 30%;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -662,11 +680,11 @@ input:focus, input:active, textarea:focus, textarea:active {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  nav:not(.active):not(.fullscreen) {
+    pointer-events:  none;
+  }
   main div.row {
     grid-template-columns: 100%;
-  }
-  main div.row .col-card .img-wrapper .img-text {
-   min-height: 80vw; 
   }
   main .partners-wrapper {
     display: grid;

@@ -71,7 +71,6 @@
     <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg" alt="" class="partner">
     <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg" alt="" class="partner">
     <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg" alt="" class="partner">
-    <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg" alt="" class="partner">
 </div>
 <pre>
 <?php

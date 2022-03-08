@@ -28,7 +28,9 @@ get_header();
     <div class="col-card mb-60">
         <div class="img-wrapper">
             <div class="img-text">
-                <?=$streamer->post_content;?>
+                <div class="text">
+                    <?=$streamer->post_content;?>
+                </div>
                 <div class="social-icons">
                     <?php 
                         $url_discord    = isset($customFields['url_discord']) && $customFields['url_discord'] ? $customFields['url_discord'] : '#';
@@ -38,22 +40,22 @@ get_header();
                         $url_facebook   = isset($customFields['url_facebook']) && $customFields['url_facebook'] ? $customFields['url_facebook'] : '#';
                         $url_link       = isset($customFields['url_link']) && $customFields['url_link'] ? $customFields['url_link'] : '#';
                     ?>
-                    <a href="<?= $url_discord ?>" class="<?= $url_discord ? 'disabled' : '' ?>">
+                    <a href="<?= $url_discord ?>" class="<?= $url_discord == '#' ? 'disabled' : '' ?>">
                         <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>
                     </a>
-                    <a href="<?= $url_twitter ?>" class="<?= $url_twitter ? 'disabled' : '' ?>">
+                    <a href="<?= $url_twitter ?>" class="<?= $url_twitter == '#' ? 'disabled' : '' ?>">
                         <?= file_get_contents(get_template_directory_uri().'/assets/icons/twitter-b.svg'); ?>
                     </a>
-                    <a href="<?= $url_instagram ?>" class="<?= $url_instagram ? 'disabled' : '' ?>">
+                    <a href="<?= $url_instagram ?>" class="<?= $url_instagram == '#' ? 'disabled' : '' ?>">
                         <?= file_get_contents(get_template_directory_uri().'/assets/icons/insta-b.svg'); ?>
                     </a>
-                    <a href="<?= $url_youtube ?>" class="<?= $url_youtube ? 'disabled' : '' ?>">
+                    <a href="<?= $url_youtube ?>" class="<?= $url_youtube == '#' ? 'disabled' : '' ?>">
                         <?= file_get_contents(get_template_directory_uri().'/assets/icons/yt-b.svg'); ?>
                     </a>
-                    <a href="<?= $url_facebook ?>" class="<?= $url_facebook ? 'disabled' : '' ?>">
+                    <a href="<?= $url_facebook ?>" class="<?= $url_facebook == '#' ? 'disabled' : '' ?>">
                         <?= file_get_contents(get_template_directory_uri().'/assets/icons/face-b.svg'); ?>
                     </a>
-                    <a href="<?= $url_link ?>" class="<?= $url_link ? 'disabled' : '' ?>">
+                    <a href="<?= $url_link ?>" class="<?= $url_link == '#' ? 'disabled' : '' ?>">
                         <?= file_get_contents(get_template_directory_uri().'/assets/icons/link-b.svg'); ?>
                     </a>
                 </div>
