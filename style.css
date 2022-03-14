@@ -243,7 +243,6 @@ main div.row .col-card {
 main div.row .col-card .img-wrapper {
   position: relative;
   width:    100%; /* desired width */
-  border: 1px solid var(--main-bg-color); 
   overflow: hidden;
 }
 
@@ -260,7 +259,7 @@ main div.row .col-card .img-wrapper .img-text {
   right:    0;
   transition: 250ms ease-in-out;
   display: grid;
-  grid-template-rows: 85% 15%;
+  grid-template-rows: 87% 13%;
 }
 
 main div.row .col-card .img-wrapper .img-text.active {
@@ -288,6 +287,7 @@ main div.row .col-card .img-wrapper .img-text.active .social-icons {
 
 main div.row .col-card .img-wrapper .img-text .text {
   padding: 10px;
+  overflow-x: auto;
 }
 
 main div.row .col-card .img-wrapper .img-text .social-icons a {
@@ -308,6 +308,7 @@ main div.row .col-card .img-wrapper img {
   width: 100%;
   height:100%;
   transition: 250ms linear;
+  border: 1px solid var(--main-bg-color); 
 }
 
 /* main div.row .col-card .img-wrapper img.active {
