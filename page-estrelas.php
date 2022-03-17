@@ -18,6 +18,7 @@ get_header();
 <h1 class="leading">ESTRELAS</h1>
 <div class="row full">
     <div class="col">
+        <?php do_shortcode('[wpforms id="61" title="false"]') ?>
         Isso é um teste apenas, me ignore... 
         We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
         We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.

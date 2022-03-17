@@ -12,49 +12,8 @@
  */
 
 ?>
-      <form class="contact-wrapper">
-          <span class="close">
-            <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
-          </span>
-          <h1 class="leading">CONTATO</h1>
-          <div class="contact-form">
-            <div class="input-wrapper">
-              <label for="nome">Nome</label>
-              <input type="text" name="nome">
-            </div>
-            <div class="input-wrapper">
-              <label for="email">E-mail</label>
-              <input type="email" name="email">
-            </div>
-            <div class="input-wrapper" style="height: 45%">
-              <label for="mensagem">Mensagem</label>
-              <textarea name="mensagem"></textarea>
-            </div>
-            <div class="input-wrapper">
-              <button>Enviar</button>
-            </div>
-          </div>
-          <div class="contact-link">
-            <a href="#">
-              <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-w.svg'); ?>
-            </a>
-            <a href="#">
-              <?= file_get_contents(get_template_directory_uri().'/assets/icons/twitter-w.svg'); ?>
-            </a>
-            <a href="#">
-              <?= file_get_contents(get_template_directory_uri().'/assets/icons/insta-w.svg'); ?>
-            </a>
-            <a href="#">
-              <?= file_get_contents(get_template_directory_uri().'/assets/icons/yt-w.svg'); ?>
-            </a>
-            <a href="#">
-              <?= file_get_contents(get_template_directory_uri().'/assets/icons/face-w.svg'); ?>
-            </a>
-            <a href="#">
-              <?= file_get_contents(get_template_directory_uri().'/assets/icons/link-w.svg'); ?>
-            </a>
-          </div>
-        </form>
+    
+<?php include get_template_directory().'/contact-form.php'; ?>  
     </main>
     
     <nav class="fullscreen">

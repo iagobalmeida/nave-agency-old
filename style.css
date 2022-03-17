@@ -528,6 +528,11 @@ nav.fullscreen {
   margin: 50px;
 }
 
+.contact-wrapper .contact-form h3 {
+  margin-top: 15%;
+  text-align: center;
+}
+
 .contact-wrapper .contact-form .input-wrapper {
   display: flex;
   flex-direction: column;
